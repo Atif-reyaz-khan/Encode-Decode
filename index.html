@@ -1,0 +1,82 @@
+<!DOCTYPE html> 
+<html> 
+
+<head> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>ImageEncoder/Decoder</title> 
+</head> 
+
+<body style="background-color:  #d1c4e9;padding-left:20px;padding-right: 20px; "> 
+	<h1 style="color:#9575cd ;">Steganography</h1> 
+	<table>
+		<tr>
+			<td>
+				<div style="padding: 0 200px 20px 0;">
+					<p style="color: #512da8 ;">
+						Steganography is the practice of hiding a secret message inside of (or even on top of) something that is not secret. That something can be just about anything you want. These days, many examples of steganography involve embedding a secret piece of text inside of a picture. 
+						The advantage of steganography over cryptography alone is that the intended secret message does not attract attention to itself as an object of scrutiny. Plainly visible encrypted messages, no matter how unbreakable they are, arouse interest and may in themselves be incriminating in countries in which encryption is illegal.
+					</p>
+				</div>
+				
+			</td>
+			<td>
+				<div style="padding: 0 200px 20px 0;">
+					<img src="download.jpeg" alt="image not found">
+				</div>
+			</td>
+		
+			
+			
+		</tr>
+	</table>
+
+
+
+<br><br>
+<button type="button" class="collapsible">Click For Encoding message in image</button>
+
+<div class="content" >
+	 
+			<input type="text" id="message" placeholder="Enter your secret message here">
+			<label for="hidden">Upload the image To hide the message </label>
+			<input type="file" id="imageLoader" name="imageLoad"/>
+			<canvas id="imageCanvas"></canvas>
+			<canvas id="textCanvas"></canvas>
+	
+
+</div>
+<br>
+<br>
+<button type="button" class="collapsible">Click For Dencoding message from image</button>
+<div class="content">
+
+
+		<label>Upload the image:</label><br/>
+		<input type="file" id="imageLoader2" name="imageLoader2"/>
+		<canvas id="imageCanvas2"></canvas>
+</div>
+<script>
+	var coll = document.getElementsByClassName("collapsible");
+	var i;
+	
+	for (i = 0; i < coll.length; i++) {
+	  coll[i].addEventListener("click", function() {
+		this.classList.toggle("active");
+		var content = this.nextElementSibling;
+		if (content.style.display === "block") {
+		  content.style.display = "none";
+		} else {
+		  content.style.display = "block";
+		}
+	  });
+	}
+	</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+		<script src="index.js"></script>
+</body> 
+
+</html> 

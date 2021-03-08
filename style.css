@@ -1,0 +1,39 @@
+.content {
+    padding: 30px 18px 0 ;
+    display: none;
+    overflow: hidden;
+    
+  }
+  .collapsible {
+    background-color:#9575cd;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+  }
+  
+  .active, .collapsible:hover {
+    background-color: #d1c4e9 ;
+  }
+label
+{
+    color:#9575cd ;
+    font-size: medium;
+}
+::placeholder {
+    color:#b59ddf;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: #9575cd;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+   color: #9575cd;
+  }
+ 
